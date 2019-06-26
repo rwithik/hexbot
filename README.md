@@ -1,5 +1,7 @@
 ![Hexbot](https://user-images.githubusercontent.com/212941/59163439-23c05900-8ab6-11e9-8764-977334c7bba8.png)
 
+Hosted at https://rwithik.github.io/hexbot/index.html.
+
 # 👋 Meet Hexbot
 
 A different color with every ping.
