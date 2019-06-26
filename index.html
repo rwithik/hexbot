@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<style type="text/css">
+	body, html {
+		padding: 0;
+		background-color: #e7e7d0;
+		margin: 0;
+	}
+
+	.center {
+		margin-top: 10vh;
+		text-align: center
+	}
+
+	.div-container {
+		position: relative;
+		width: 15vw;
+		height: 15vw;
+		margin: 0 auto;
+	}
+
+	canvas {
+		background-color: black;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+  		top: 30vh;
+		border-radius: 50%;
+  		transform: translateY(-50%);
+		transition:color 1s ease;
+		box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+	}
+
+	p {
+		display: inline;
+		font-size: 5em;
+	}
+
+</style>
+
+<head>
+    <script src="script.js"></script>
+	<title>Hexbot ring</title>
+</head>
+
+
+
+<body style="padding: 0; margin: 0;">
+
+	<div class="center">
+	    <p onClick="newcolor()" id="emoji-happy">😊</p>
+	    <p onClick="newcolor()" id="emoji-love">😍</p>
+	    <p onClick="newcolor()" id="emoji-sad">😔</p>
+	    <p onClick="newcolor()" id="emoji-angry">🤬</p>
+	    <p onClick="newcolor()" id="emoji-sick">🤢</p>
+	</div>
+
+
+	<div class="div-container">
+		<canvas id="canvas">	
+		</canvas>
+	</div>
+
+</body>
+</html>
