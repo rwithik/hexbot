@@ -7,11 +7,11 @@ let seeds = {"emoji-angry": "FF0000,FF0048,FF0072",
 			 "emoji-happy": "FFB200,FFF600,D4FF00"
 			};
 
-let shadows = {"emoji-angry": "rgba(256, 0, 0, 0.4)",
-			 "emoji-love": "rgba(255, 0, 114, 0.4)",
-			 "emoji-sick": "rgba(1, 163, 25, 0.4)",
-			 "emoji-sad": "rgba(0, 174, 255, 0.4)",
-			 "emoji-happy": "rgba(255, 178, 0, 0.4)"
+let shadows = {"emoji-angry": "rgba(256, 0, 0, 0.6)",
+			 "emoji-love": "rgba(255, 0, 114, 0.6)",
+			 "emoji-sick": "rgba(1, 163, 25, 0.6)",
+			 "emoji-sad": "rgba(0, 174, 255, 0.6)",
+			 "emoji-happy": "rgba(255, 178, 0, 0.6)"
 			};
 
 let colorInterval = setInterval( () => {
@@ -28,7 +28,9 @@ function newcolor(){
 				console.log(res.colors);
 				colorInterval = setInterval(() => {
 					document.getElementById('canvas').style.transition = '600ms linear';
-					document.getElementById('canvas').style.boxShadow = '5px 5px 5px ' + shadows[emoji];
+					document.getElementById('inner-div').style.transition = '600ms linear';
+					document.getElementById('canvas').style.boxShadow = '0px 0px 20px ' + shadows[emoji];
+					document.getElementById('inner-div').style.boxShadow = 'inset 0px 0px 20px ' + shadows[emoji];
 					document.getElementById('canvas').style.backgroundColor = res.colors[i].value;
 					i = (i + 1) % max;
 				}, 750);
